@@ -11,9 +11,9 @@ type DepartmentsListProps = {
 export default function DepartmentsList({ departments }: DepartmentsListProps) {
   return (
     <>
-      <ul>
+      <ul className="flex">
         {departments.map((department) => (
-          <li key={department.id}>
+          <li className="flex-1" key={department.id}>
             <DepartmentItem
               departmentName={department.departmentName}
               accounts={ACCOUNTS}

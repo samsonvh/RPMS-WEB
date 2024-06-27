@@ -44,8 +44,8 @@ export default function DepartmentItem({
       : [];
 
   return (
-    <main className="flex justify-center items-start">
-      <div>
+    <>
+      <div className="justify-center flex">
         <Button onClick={handleToggleDropdown}>
           <div className="flex items-center space-x-1">
             <p className="text-2xl text-yellow-400 hover:text-yellow-500">
@@ -58,21 +58,21 @@ export default function DepartmentItem({
             />
           </div>
         </Button>
-        {isDropdownOpen && (
-          <ul>
-            {filteredAccounts.map((account) => (
-              <li
-                className="text-blue-400 hover:text-blue-500 text-right"
-                key={account.id}
-              >
-                <Button to={`/accounts/${account.id}`}>
-                  {account.firstName} {account.lastName}
-                </Button>
-              </li>
-            ))}
-          </ul>
-        )}
       </div>
-    </main>
+      {isDropdownOpen && (
+        <ul>
+          {filteredAccounts.map((account) => (
+            <li
+              className="text-blue-400 hover:text-blue-500 text-center"
+              key={account.id}
+            >
+              <Button to={`/accounts/${account.id}`}>
+                {account.firstName} {account.lastName}: {account.position}
+              </Button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </>
   );
 }

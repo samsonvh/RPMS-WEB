@@ -136,7 +136,7 @@ export default function AddAccount({ onClose }: AddAccountProps) {
             <div>
               <label>Working Position:</label>
               <br />
-              <select className="select" id="position">
+              <select name="position" className="select" id="position">
                 <option>Please select a position</option>
                 <option value="Admin">Admin</option>
                 <option value="Factory Director">Factory Director</option>
