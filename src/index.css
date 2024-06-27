@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(90deg, #5e37c1 0, #a587dc 100%);
+}
+
+#navbar-header a {
+  text-decoration: none;
+  color: #7c828f;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+#navbar-header a:hover,
+#navbar-header a:active,
+#navbar-header a.active {
+  border-color: #000;
+  color: #000;
+}
+
+#table td,
+th {
+  padding-left: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: left;
+  align-items: center;
+  /* border-color: #7c828f; */
+  border: 1px solid #7c828f;
+}
+
+.modal {
+  width: 90%;
+  max-width: 35rem;
+  background-color: #6b5e81;
+  color: #edeaf3;
+  border-radius: 8px;
+  border: none;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* .control {
+  margin-bottom: 1rem;
+} */
+
+.control input {
+  /* width: 100%; */
+  max-width: 35rem;
+  color: black;
+  padding: 4px 8px;
+  /* font: inherit; */
+  /* font-size: 1.25rem; */
+  /* border: 1px solid #d3cedc; */
+  border-radius: 6px;
+  /* padding: 0.5rem; */
+}
+
+.control input:focus {
+  border-color: #a587dc;
+  /* background-color: #a587dc */
+}
+
+.select option {
+  color: black;
+}
+
+.select {
+  color: #abaeb4;
+  border-radius: 6px;
+  padding: 6px 4px;
+}
