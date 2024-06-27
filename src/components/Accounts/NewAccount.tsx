@@ -20,7 +20,7 @@ export default function AddAccount({ onClose }: AddAccountProps) {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
+    setError(false);
     const formData = new FormData(event.currentTarget);
     const data = Object.fromEntries(formData);
     success();
