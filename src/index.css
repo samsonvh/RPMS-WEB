@@ -10,7 +10,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(90deg, #5e37c1 0, #a587dc 100%);
+  background: white;
 }
 
 #navbar-header a {

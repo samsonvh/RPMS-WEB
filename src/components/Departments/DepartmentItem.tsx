@@ -1,5 +1,6 @@
 import Button from "../UI/Button";
 import dropdown from "../../assets/dropdown.svg";
+import dropup from "../../assets/dropup.svg";
 import { useState } from "react";
 
 type AccountProps = {
@@ -51,11 +52,19 @@ export default function DepartmentItem({
             <p className="text-2xl text-yellow-400 hover:text-yellow-500">
               {departmentName}
             </p>
-            <img
-              className="w-5 h-5 rounded-full"
-              src={dropdown}
-              alt="Dropdown"
-            />
+            {isDropdownOpen ? (
+              <img
+                className="w-5 h-5 rounded-full"
+                src={dropup}
+                alt="Dropdown"
+              />
+            ) : (
+              <img
+                className="w-5 h-5 rounded-full"
+                src={dropdown}
+                alt="Dropdown"
+              />
+            )}
           </div>
         </Button>
       </div>
