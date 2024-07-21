@@ -19,7 +19,7 @@ const Router = createBrowserRouter([
         index: true,
         element: <Login />,
       },
-      { path: "accounts", element: <Accounts /> },
+      { path: "accounts", element: <Counter /> },
       { path: "accounts/:id", element: <Account /> },
       { path: "departments", element: <Departments /> },
       { path: "counter", element: <Counter /> },
