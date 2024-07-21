@@ -8,7 +8,8 @@ import NotFound from "./pages/NotFound.tsx";
 import Account from "./pages/accounts/Account.tsx";
 import { Bounce, ToastContainer } from "react-toastify";
 import { Counter } from "./pages/Counter.tsx";
-
+import { store } from "./redux/store.ts";
+import { Provider } from "react-redux";
 const Router = createBrowserRouter([
   {
     path: "/",
@@ -42,7 +43,9 @@ const Router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={Router} />
+      <Provider store={store}>
+        <RouterProvider router={Router} />
+      </Provider>
       <ToastContainer
         position="top-right"
         autoClose={1000}
