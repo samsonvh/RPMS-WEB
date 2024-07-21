@@ -7,7 +7,7 @@ import Departments from "./pages/Departments.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Account from "./pages/accounts/Account.tsx";
 import { Bounce, ToastContainer } from "react-toastify";
-import { Counter } from "./app/features/Counter.tsx";
+import { Counter } from "./pages/Counter.tsx";
 
 const Router = createBrowserRouter([
   {
@@ -19,10 +19,10 @@ const Router = createBrowserRouter([
         index: true,
         element: <Login />,
       },
-      { path: "accounts", element: <Counter /> },
+      { path: "accounts", element: <Accounts /> },
       { path: "accounts/:id", element: <Account /> },
       { path: "departments", element: <Departments /> },
-      { path: "counter", element: <Accounts /> },
+      { path: "counter", element: <Counter /> },
     ],
   },
   // {
