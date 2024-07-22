@@ -1,25 +1,25 @@
-import { useAppSelector, useAppDispatch } from "../redux/hooks";
+//import { useAppSelector, useAppDispatch } from "../redux/hooks";
 
-import { decrement, increment } from "../redux/features/counterSlice";
+//import { decrement, increment } from "../redux/features/counterSlice";
 
 export function Counter() {
   // The `state` arg is correctly typed as `RootState` already
-  const count = useAppSelector((state) => state.counter.value);
-  const dispatch = useAppDispatch();
+  //const count = useAppSelector((state) => state.counter.value);
+  //const dispatch = useAppDispatch();
 
   return (
     <div>
       <div>
         <button
           aria-label="Increment value"
-          onClick={() => dispatch(increment())}
+          //onClick={() => dispatch(increment())}
         >
           Increment
         </button>
-        <span>{count}</span>
+        //<span>{count}</span>
         <button
           aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
+          //onClick={() => dispatch(decrement())}
         >
           Decrement
         </button>
